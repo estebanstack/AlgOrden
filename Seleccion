@@ -1,0 +1,23 @@
+def ordenamiento_por_seleccion(lista):
+    n = len(lista)
+    for i in range(n):
+        # Suponemos que el mínimo es el primer elemento sin ordenar
+        indice_minimo = i
+        
+        # Recorremos el resto de la lista para encontrar el mínimo
+        for j in range(i + 1, n):
+            if lista[j] > lista[indice_minimo]:
+                indice_minimo = j
+        
+        # Intercambiamos el elemento mínimo encontrado con el primero
+        lista[i], lista[indice_minimo] = lista[indice_minimo], lista[i]
+    
+    return lista
+
+numeros
+# Ejemplo de uso
+for i in range(1, 30):
+    numeros[i]=i
+
+print("Lista original:", numeros)
+print("Lista ordenada:", ordenamiento_por_seleccion(numeros))
